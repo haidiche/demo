@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- style>
+		.cls{
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+		}
+	</style> -->
+</head>
+<body>
+<!-- 
+JS分三个部分
+ECMAScript标准：JS的基本语法
+DOM:文档对象模型---操作页面的元素
+BOM：浏览器对象模型---操作的是浏览器
+-->
+<!-- 由文档及文档中的所有的元素（标签）组成的一个树形结构图，叫树状图 -->
+<!-- <input type="button" value="显示图片" id="btn"/>
+<img src="" id="im"/>
+<script>
+var btnObj=document.getElementById("btn");
+btnObj.onclick=function(){
+	var imObj=document.getElementById('im');
+	imObj.src='star.jpg';
+	imObj,width="200";
+	imObj.height="300";
+
+};
+</script> -->
+
+
+    <input type="button" value="没雪糕"/>
+    <input type="button" value="没雪糕"/>
+	<input type="button" value="没雪糕"/>
+	<input type="button" value="没雪糕"/>
+	<input type="button" value="没雪糕"/>
+<script>
+var btnObjs = document.getElementsByTagName('input');
+for (var i = 0; i < btnObjs.length; i++) {
+	btnObjs[i].onclick = function(){
+		for (var j = 0; j < btnObjs.length; j++) {
+			btnObjs[j].value="没雪糕";
+			
+		}
+		this.value = "有雪糕";
+
+	};
+}
+</script>
+<!-- <input type="button"  value="设置样式" id="btn"/>
+<div id="dv" class="cls"></div>
+<script>
+	function my(ele){
+		return document.getElementById(ele)
+	}
+</script>
+<script>
+	my("btn").onclick = function(){
+		my("dv").style.width="300px";
+		my("dv").style.height="300px";
+		my("dv").style.backgroundColor="yellow";
+	};
+	// my("btn").className="cls";
+</script> -->
+<!-- 
+//API(Application Programming Interface)是一些预定义的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码，或理解内部工作机制的细节。是每个语言中系统提供的一些方法、工具  
+//web api 浏览器提供一套操作浏览器功能和页面元素的API（BOM和DOM） -->
+
+</body>
+</html>
